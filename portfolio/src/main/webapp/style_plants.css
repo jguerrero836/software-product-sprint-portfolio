@@ -11,3 +11,17 @@ p {
     color: white;
     font-size: medium;
 }
+
+.column {
+  float: left;
+  width: 30.00%;
+  padding: 20px;
+  text-align: center;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  text-align: center;
+}
