@@ -41,3 +41,15 @@ function addRandomFact() {
   const factContainer = document.getElementById('greeting-container');
   factContainer.innerText = fact;
 }
+
+function addRandomPlantPicture() {
+    const plant_pics = [
+        "/images/seedling.jpg", "/images/garfield.jpeg",
+        "/images/flowers.jpeg"
+    ];
+
+    const picture = plant_pics[Math.floor(Math.random() * plant_pics.length)];
+    const picContainer = document.getElementById('plant_pic');
+    document.getElementById('plant').src = picture;
+
+}
