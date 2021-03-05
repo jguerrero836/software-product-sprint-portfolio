@@ -58,6 +58,6 @@ async function serverHelloWorld() {
     const responseFromServer = await fetch('/hello');
     const textFromResponse = await responseFromServer.text();
 
-    const greetingContainer = document.getElementById('greeting-container');
-    greetingContainer.innerText = textFromResponse;
+    const helloContainer = document.getElementById('greeting-container');
+    helloContainer.innerText = textFromResponse;
 }
