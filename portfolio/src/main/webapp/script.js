@@ -53,3 +53,11 @@ function addRandomPlantPicture() {
     document.getElementById('plant').src = picture;
 
 }
+
+async function serverHelloWorld() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+
+    const greetingContainer = document.getElementById('greeting-container');
+    greetingContainer.innerText = textFromResponse;
+}
