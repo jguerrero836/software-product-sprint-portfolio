@@ -54,10 +54,12 @@ function addRandomPlantPicture() {
 
 }
 
-async function serverHelloWorld() {
+async function displayHelloWorld() {
     const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
-
+    const jsonFromResponse = await responseFromServer.json();
+        
     const helloContainer = document.getElementById('greeting-container');
-    helloContainer.innerText = textFromResponse;
+    helloContainer.innerText = jsonFromResponse[0];
+    console.log(jsonFormResponse[0]);
+    
 }
