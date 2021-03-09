@@ -59,7 +59,8 @@ async function displayHelloWorld() {
     const jsonFromResponse = await responseFromServer.json();
         
     const helloContainer = document.getElementById('greeting-container');
-    helloContainer.innerText = jsonFromResponse[0];
+    helloContainer.innerText = jsonFromResponse[0] + " " + jsonFromResponse[Math.floor(Math.random() * 
+        jsonFromResponse.length)];
     console.log(jsonFormResponse[0]);
     
 }
