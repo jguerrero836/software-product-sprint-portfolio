@@ -64,3 +64,13 @@ async function displayHelloWorld() {
     console.log(jsonFormResponse[0]);
     
 }
+
+async function displayImageList() {
+    const responseFromServer = await fetch('/list-images');
+    const jsonFromResponse = await responseFromServer.json();
+        
+    const listContainer = document.getElementById('image-list-container');
+    listContainer.innerText = jsonFromResponse
+    
+    
+}
