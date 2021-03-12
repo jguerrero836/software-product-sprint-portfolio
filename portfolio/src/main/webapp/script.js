@@ -54,23 +54,10 @@ function addRandomPlantPicture() {
 
 }
 
-async function displayHelloWorld() {
+async function serverHelloWorld() {
     const responseFromServer = await fetch('/hello');
-    const jsonFromResponse = await responseFromServer.json();
-        
-    const helloContainer = document.getElementById('greeting-container');
-    helloContainer.innerText = jsonFromResponse[0] + " " + jsonFromResponse[Math.floor(Math.random() * 
-        jsonFromResponse.length)];
-    console.log(jsonFormResponse[0]);
-    
-}
+    const textFromResponse = await responseFromServer.text();
 
-async function displayImageList() {
-    const responseFromServer = await fetch('/list-images');
-    const jsonFromResponse = await responseFromServer.json();
-        
-    const listContainer = document.getElementById('image-list-container');
-    listContainer.innerText = jsonFromResponse
-    
-    
+    const greetingContainer = document.getElementById('greeting-container');
+    greetingContainer.innerText = textFromResponse;
 }
